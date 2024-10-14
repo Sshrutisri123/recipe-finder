@@ -1,0 +1,374 @@
+.meal-result_hidden{
+    text-align: center;
+
+    margin-top: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgb(227, 167, 177);
+ 
+    background-size: cover;
+    background-position: center;
+    filter: blur(7px);
+    /* Adjust blur intensity as needed */
+    z-index: -1;
+    /* Ensure the background is behind other content */
+    color: rgba(0, 0, 0, 0.55);
+
+}
+
+/*.background-image {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('WhatsApp\ Image\ 2024-07-12\ at\ 13.02.30_2c926788.jpg'); 
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px); 
+    z-index: -1;
+    color: rgba(0,0,0,0.55);
+    
+}*/
+.nav {
+    width: auto;
+    height: auto;
+    padding: 15px 200px;
+    border-radius: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.nav,
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    color: rgb(255, 254, 254);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav {
+    justify-content: space-between;
+}
+
+.nav .logo {
+    color: orange;
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: -120px;
+    height: 100%;
+
+}
+
+.nav .nav-links {
+    column-gap: 90px;
+    list-style: none;
+}
+
+.content {
+    margin-top: 90px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .textbox {
+    position: relative;
+    max-width: 600px;
+    margin-left: 40px;
+}
+
+.content .textbox h2 {
+    color: #fffdfd;
+    font-size: 4em;
+    line-height: 0.8em;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+.content .textbox p {
+    margin-left: 30px;
+    color: rgb(255, 254, 254);
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.content .imagebox {
+
+    display: flex;
+    justify-content: flex-end;
+    margin-right:70px;
+    margin-top: 1px;
+
+    border-radius: 8px;
+}
+
+.btn {
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
+    font-size: 1.05rem;
+}
+
+.meal-search-box {
+    margin: 1.2rem 0;
+    display: flex;
+    align-items: stretch;
+}
+
+.search-content,
+.search-btn {
+    width: 100%;
+
+}
+
+.search-content {
+    padding:0 1rem;
+   
+    font-size: 1.1rem;
+    font-family: inherit;
+
+    outline: 0;
+    border: 1px solid rgb(23, 23, 23);
+    color: black;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+
+}
+
+.search-content::placeholder {
+    color: rgb(143, 35, 71);
+}
+
+.search-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+    border: 1px solid rgb(23, 23, 23);
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background: rgb(161, 60, 77);
+    transition: all 0.4s linear;
+}
+
+.search-btn:hover {
+    background: rgb(240, 244, 240);
+}
+.bona-nova-sc-bold:hover{
+    color:  rgb(143, 35, 71);
+
+}
+
+
+#meal {
+    margin: 2.4rem 0;
+}
+
+.meal-item {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgb(0, 0, 0, 0.80);
+    margin: 2rem 0;
+
+}
+
+.recipe-btn {
+    color: #f1ebeb;
+    text-decoration: none;
+    background:rgb(227, 167, 177);
+    font-weight: 500;
+    font-size: 1.15rem;
+    padding: 0.75rem 0;
+    display: block;
+    width: 175px;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    transition: all 0.4s linear;
+    text-align: center;
+
+
+}
+.recipe-btn:hover{
+    background: red;
+
+}
+.meal-details{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fffdfd;
+    background: rgb(227, 167, 177);
+    border-radius:1rem ;
+    width: 90%;
+    height: 90%;
+    overflow-y: scroll ;
+    display: none;
+    padding: 2rem 0;
+    text-align: center;
+    
+}
+.meal-details::-webkit-scrollbar{
+    width: 10px;
+
+}
+.meal-details::-webkit-scrollbar-thumb{
+    background: #fffdfd;
+    border-radius: 2rem;
+}
+
+/*js related*/
+.showRecipe{
+    display: block;
+}
+.meal-details-content{
+    margin: 2rem;
+
+}
+.meal-details-content p :not(.recipe-category){
+    padding: 1rem 0;
+}
+.recipe-close-btn{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.8rem;
+    background: rgb(246, 243, 243);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9rem;
+}
+.recipe-title{
+    letter-spacing: 1px;
+    padding-bottom: -20rem;
+    text-transform: uppercase;
+}
+.recipe-category{
+    background: white;
+    font-weight: 600;
+    color:rgb(227, 167, 177);
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+}
+.recipe-instruct{
+    padding: 1rem ;
+}
+
+.recipe-meal-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+
+}
+.recipe-link{
+   margin: 1.4rem 0;
+
+}
+
+
+.recipe-link a{
+    color: rgb(7, 7, 7);
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.4s linear;
+}
+.recipe-link a:hover{
+    opacity: 0.8;
+}
+/**/
+.notFound{
+    grid-template-columns: 1fr!important;
+
+    color: palevioletred;
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    width: 100%;
+
+}
+
+.meal-img img {
+    width: 100%;
+    display: block;
+}
+.meal-name{
+    padding: 1.5rem 0.5rem;
+}
+.meal-name h3{
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+/*media queries*/
+@media screen and (min-width:700px) {
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+    .meal-item{
+        margin: 0;
+    }
+    .meal-details{
+        width: 500px;
+        height: 500px;
+
+    }
+}
+@media screen and (min-width:992px){
+    #meal{
+        grid-template-columns: repeat(4,1fr);
+    }
+    
+    
+}
+.meal-results{
+    text-align: center;
+    margin-top: 5rem;
+    color: #171616;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.hidden{
+    display: none;
+}
